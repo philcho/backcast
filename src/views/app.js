@@ -3,13 +3,14 @@ var AppView = Backbone.View.extend({
   el: '#app',
 
   initialize: function() {
-    this.videos = new Videos();
+    this.videos = new Videos(this.collection);
   },
 
 
   render: function() {
     this.$el.html(this.template());
-    return this;
+    console.log(this.collection);
+    new VideoListView({el: this.$('.list'), collection: this.videos}).render();
   },
 
   template: templateURL('src/templates/app.html')
