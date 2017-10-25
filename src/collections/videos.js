@@ -20,7 +20,6 @@ var Videos = Backbone.Collection.extend({
         maxResults: 5 
       },
       success: data => {
-        console.log(data);
         this.selected = data.models[0];
         data.models[0].select();
       }

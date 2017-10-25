@@ -15,6 +15,8 @@ body {
 }
 
 .search-bar {
+  position: relative;
+  z-index: 10;
   border-radius: 1px;
   background: #fff;
 }
@@ -35,6 +37,14 @@ body {
   border-color: #c6c6c6;
   background: #f0f0f0;
   box-shadow: 0 1px 0 rgba(0,0,0,0.10);
+}
+
+.search-bar .live-results {
+/*  display: none; */
+  position: absolute;
+  top: 38px;
+  left: 0;
+  width: 80%;
 }
 
 .video-player {
